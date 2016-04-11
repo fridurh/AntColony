@@ -145,8 +145,8 @@ poddulisti.append(Balin)
 Melli1 = Ant("red")
 Melli1.velocity=1
 Melli1.direction = "left"
-Melli1.posX = 90
-Melli1.posY = 39
+Melli1.posX = 60
+Melli1.posY = 7
 Melli1.name="Melli1"
 Melli1.picture = 'ant-red-left.gif'
 Melli1.draw(win)
@@ -177,17 +177,6 @@ Padda2.falling = False
 Padda2.draw(win)
 ladybuglisti.append(Padda2)
 
-Padda3 = Ladybug("pink")
-Padda3.velocity=0.8
-Padda3.direction = "right"
-Padda3.posX = 35
-Padda3.posY = 23
-Padda3.name="Padda"
-Padda3.picture = 'ladybug_walk-right.gif'
-Padda3.falling = False
-Padda3.draw(win)
-ladybuglisti.append(Padda3)
-
 Dobby = Ladybug("pink")
 Dobby.velocity=0.8
 Dobby.direction = "right"
@@ -214,3 +203,11 @@ MoveableRock1.posY = 40
 MoveableRock1.falling = False
 MoveableRock1.draw(win)
 MoveableRocklisti.append(MoveableRock1)
+
+MoveableRock2 = MoveableRock("grey")
+MoveableRock2.picture = 'StaticRock1.gif'
+MoveableRock2.posX = 75
+MoveableRock2.posY = 32
+MoveableRock2.falling = False
+MoveableRock2.draw(win)
+MoveableRocklisti.append(MoveableRock2)

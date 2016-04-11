@@ -10,6 +10,8 @@ st = 0.1
 t=0
 while t < 300:
     time.sleep(st)
+    t = t + 1
+
     for i in range(len(poddulisti) - 1):
         j = i + 1;
         for j in range(j, len(poddulisti)):
@@ -74,7 +76,7 @@ while t < 300:
             ladybuglisti[i].hitwall(win)
                                
 
-    t = t + 1    
+     
 
     
     
