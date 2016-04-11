@@ -319,7 +319,7 @@ class Ladybug(Animal):
         elif self.posX > 70 and stick.posX > 70: #The ant is on Stick66
           if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
             self.LFalling = True 
-               
+
    def turnAround(self, win):
       if (self.direction == "left"):
          self.direction = "right"
@@ -332,5 +332,5 @@ class Ladybug(Animal):
          self.picture = "ladybug_walk"
 
    def hitwall(self,win):
-      if ((self.posX == 3) or (self.posX == 118)):
+      if ((self.posX < -5) or (self.posX > 110)):
          self.turnAround(win)
