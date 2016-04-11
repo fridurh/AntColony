@@ -5,9 +5,6 @@ from graphics import *
 import itertools 
 
 
-#hallohallo
-
-
 
 st = 0.1        
 t=0
@@ -71,11 +68,6 @@ while t < 300:
                                
 
     t = t + 1    
-                
-
-  
-    
-    #fridur
     
     
 
