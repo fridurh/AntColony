@@ -158,7 +158,7 @@ ladybuglisti = [];
 Padda = Ladybug("pink")
 Padda.velocity=0.8
 Padda.direction = "left"
-Padda.posX = 70
+Padda.posX = 20
 Padda.posY = 15
 Padda.name="Padda"
 Padda.picture = 'ladybug_walk.gif'
@@ -179,14 +179,25 @@ ladybuglisti.append(Padda2)
 
 Padda3 = Ladybug("pink")
 Padda3.velocity=0.8
-Padda3.direction = "left"
-Padda3.posX = 38
-Padda3.posY = 15
+Padda3.direction = "right"
+Padda3.posX = 20
+Padda3.posY = 23
 Padda3.name="Padda"
-Padda3.picture = 'ladybug_walk.gif'
+Padda3.picture = 'ladybug_walk-right.gif'
 Padda3.falling = False
 Padda3.draw(win)
 ladybuglisti.append(Padda3)
+
+Dobby = Ladybug("pink")
+Dobby.velocity=0.8
+Dobby.direction = "right"
+Dobby.posX = 15
+Dobby.posY = 7
+Dobby.name="Padda"
+Dobby.picture = 'ladybug_walk-right.gif'
+Dobby.falling = False
+Dobby.draw(win)
+ladybuglisti.append(Dobby)
 
 
 StatickRock1 = StaticRock("grey")

@@ -48,14 +48,14 @@ while t < 300:
 
     for i in range(len(ladybuglisti)):
         for j in range(len(Sticklisti)):
-            ladybuglisti[i].isFalling(Sticklisti[j])
-            if (ladybuglisti[i].falling):
+            ladybuglisti[i].LadyFalling(Sticklisti[j])
+            if (ladybuglisti[i].LFalling and ladybuglisti[i].posX > 12 and ladybuglisti[i].posX!= 118-8):
                 flyingbugslisti.append(ladybuglisti[i])
 
     for i in range(len(poddulisti)):
         for j in range(len(ladybuglisti)):
             if (poddulisti[i].posY == ladybuglisti[j].posY):
-                if (((poddulisti[i].posX+3) > ladybuglisti[j].posX and poddulisti[i].posX < (ladybuglisti[j].posX+3)) or ((poddulisti[i].posX+3) < ladybuglisti[j].posX and poddulisti[i].posX > (ladybuglisti[j].posX+3))):
+                if (((poddulisti[i].posX+1) > ladybuglisti[j].posX and poddulisti[i].posX < (ladybuglisti[j].posX+1)) or ((poddulisti[i].posX+1) < ladybuglisti[j].posX and poddulisti[i].posX > (ladybuglisti[j].posX+1))):
                     flyingbugslisti.append(ladybuglisti[j])
 
     for i in range(len(flyingbugslisti)):
@@ -65,9 +65,11 @@ while t < 300:
 
     for i in range(len(ladybuglisti)):
             ladybuglisti[i].moveFwd()
+            ladybuglisti[i].hitwall(win)
                                
 
     t = t + 1    
+
     
     
 
