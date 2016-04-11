@@ -9,6 +9,66 @@ class Thing:
 
    def getName(self):
      print (name)
+   def turnAround(self, win):
+       if (self.color == "red"):
+           if (self.direction == "left"):
+              self.direction = "right"
+              self.pic.undraw()
+              self.picture = "ant-red-right.gif"
+              self.draw(win)
+           else:
+              self.direction = "left"
+              self.pic.undraw()
+              self.picture = "ant-red-left.gif"
+              self.draw(win)
+       elif (self.color == "black"):
+          if (self.direction == "left"):
+             self.direction = "right"
+             self.pic.undraw()
+             self.picture = "ant-black-right.gif"
+             self.draw(win)
+          else:
+             self.direction = "left"
+             self.pic.undraw()
+             self.picture = "ant-black-left.gif"
+             self.draw(win)
+       elif (self.color == "blue"):
+          if (self.direction == "left"):
+             self.direction = "right"
+             self.pic.undraw()
+             self.picture = "ant_blue_cute_right.gif"
+             self.draw(win)
+          else:
+             self.direction = "left"
+             self.pic.undraw()
+             self.picture = "ant_blue_cute_left.gif"
+             self.draw(win)
+       elif (self.color == 'grey'):
+          self.pic.undraw()
+          self.picture = 'StaticRock1_angry.gif'
+          self.draw(win) 
+       elif (self.color == 'green'):
+          if (self.direction == "left"):
+             self.direction = "right"
+             self.pic.undraw()
+             self.picture = "ant_green_cute_right.gif"
+             self.draw(win)
+          else:
+             self.direction = "left"
+             self.pic.undraw()
+             self.picture = "ant_green_cute_left.gif"
+             self.draw(win)        
+       else:
+          if (self.direction == "left"):
+              self.direction = "right"
+              self.pic.undraw()
+              self.picture = "ant-red-right.gif"
+              self.draw(win)
+          else:
+              self.direction = "left"
+              self.pic.undraw()
+              self.picture = "ant-red-left.gif"
+              self.draw(win)           
 
    def isFalling(self, stick):
       if (self.posY ==  47 or self.posY == 48) and stick.posY == 45: # the ant is on level 1
@@ -92,66 +152,21 @@ class MoveableRock(Rock):
           self.posX = self.posX + strongAnt.velocity
           self.pic.move(strongAnt.velocity, 0)  
 
-   def fallingRock(self):
+   def fallingRock(self, win):
+      self.pic.undraw()
+      self.picture = 'StaticRock1.gif'
+      self.draw(win)
       self.posY = self.posY - 0.25
       self.pic.move(0,-0.25)
 
    def rocklands(self):
-      if (self.posY == 46 or self.posY == 40 or self.posY == 30 or self.posY == 22 or self.posY == 14 or self.posY == 6):
+      if (self.posY == 46 or self.posY == 40 or self.posY == 30 or self.posY == 24 or self.posY == 14 or self.posY == 6):
         self.falling = False
         self.pic.undraw()
    def collision(self, antTwo, win):
          self.turnAround(win)
          antTwo.turnAround(win)
-   def turnAround(self, win):
-       if (self.color == "red"):
-           if (self.direction == "left"):
-              self.direction = "right"
-              self.pic.undraw()
-              self.picture = "ant-red-right.gif"
-              self.draw(win)
-           else:
-              self.direction = "left"
-              self.pic.undraw()
-              self.picture = "ant-red-left.gif"
-              self.draw(win)
-       elif (self.color == "black"):
-          if (self.direction == "left"):
-             self.direction = "left"
-             self.pic.undraw()
-             self.picture = "ant-black-right.gif"
-             self.draw(win)
-          else:
-             self.direction = "right"
-             self.pic.undraw()
-             self.picture = "ant-black-left.gif"
-             self.draw(win)
-       elif (self.color == "blue"):
-          if (self.direction == "left"):
-             self.direction = "right"
-             self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
-             self.draw(win)
-          else:
-             self.direction = "left"
-             self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
-             self.draw(win)
-       elif (self.color == 'grey'):
-          self.pic.undraw()
-          self.picture = 'StaticRock1_angry.gif'
-          self.draw(win)       
-       else:
-          if (self.direction == "left"):
-              self.direction = "right"
-              self.pic.undraw()
-              self.picture = "ant-red-right.gif"
-              self.draw(win)
-          else:
-              self.direction = "left"
-              self.pic.undraw()
-              self.picture = "ant-red-left.gif"
-              self.draw(win)           
+        
                   
       
 
@@ -183,65 +198,7 @@ class Ant(Animal):
       self.pic = Image(Point(self.posX, self.posY), self.picture)
       self.pic.draw(win)
 
-   def turnAround(self, win):
-       if (self.color == "red"):
-           if (self.direction == "left"):
-              self.direction = "right"
-              self.pic.undraw()
-              self.picture = "ant-red-right.gif"
-              self.draw(win)
-           else:
-              self.direction = "left"
-              self.pic.undraw()
-              self.picture = "ant-red-left.gif"
-              self.draw(win)
-       elif (self.color == "black"):
-          if (self.direction == "left"):
-             self.direction = "right"
-             self.pic.undraw()
-             self.picture = "ant-black-right.gif"
-             self.draw(win)
-          else:
-             self.direction = "left"
-             self.pic.undraw()
-             self.picture = "ant-black-left.gif"
-             self.draw(win)
-       elif (self.color == "blue"):
-          if (self.direction == "left"):
-             self.direction = "right"
-             self.pic.undraw()
-             self.picture = "ant_blue_cute_right.gif"
-             self.draw(win)
-          else:
-             self.direction = "left"
-             self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
-             self.draw(win)
-       elif (self.color == 'grey'):
-          self.pic.undraw()
-          self.picture = 'StaticRock1.gif' 
-       elif (self.color == 'green'):
-          if (self.direction == "left"):
-             self.direction = "right"
-             self.pic.undraw()
-             self.picture = "ant_green_cute_right.gif"
-             self.draw(win)
-          else:
-             self.direction = "left"
-             self.pic.undraw()
-             self.picture = "ant_green_cute_left.gif"
-             self.draw(win)        
-       else:
-          if (self.direction == "left"):
-              self.direction = "right"
-              self.pic.undraw()
-              self.picture = "ant-red-right.gif"
-              self.draw(win)
-          else:
-              self.direction = "left"
-              self.pic.undraw()
-              self.picture = "ant-red-left.gif"
-              self.draw(win)    
+   
 
 
             
@@ -344,5 +301,5 @@ class Ladybug(Animal):
          self.draw(win)
 
    def hitwall(self,win):
-      if ((self.posX < -5) or (self.posX > 105)):
+      if ((self.posX < -5) or (self.posX > 101)):
          self.turnAround(win)

@@ -8,15 +8,13 @@ import itertools
 
 st = 0.1        
 t=0
-while t < 300:
+while t < 400:
     time.sleep(st)
-    t = t + 1
-
     for i in range(len(poddulisti) - 1):
         j = i + 1;
         for j in range(j, len(poddulisti)):
             if (poddulisti[i].posY == poddulisti[j].posY):
-                if (((poddulisti[i].posX+5) > poddulisti[j].posX and poddulisti[i].posX < (poddulisti[j].posX+5)) or ((poddulisti[i].posX+5) < poddulisti[j].posX and poddulisti[i].posX > (poddulisti[j].posX+5))):
+                if (((poddulisti[i].posX+1) > poddulisti[j].posX and poddulisti[i].posX < (poddulisti[j].posX+1)) or ((poddulisti[i].posX+1) < poddulisti[j].posX and poddulisti[i].posX > (poddulisti[j].posX+1))):
                     poddulisti[i].collision(poddulisti[j],win)
 
     for i in range(len(poddulisti)):
@@ -51,7 +49,7 @@ while t < 300:
         for j in range(len(Sticklisti)):
             MoveableRocklisti[i].isFalling(Sticklisti[j])
             if (MoveableRocklisti[i].falling):
-                MoveableRocklisti[i].fallingRock()
+                MoveableRocklisti[i].fallingRock(win)
                 MoveableRocklisti[i].rocklands()
 
     for i in range(len(ladybuglisti)):
@@ -76,7 +74,7 @@ while t < 300:
             ladybuglisti[i].hitwall(win)
                                
 
-     
+    t = t + 1    
 
     
     

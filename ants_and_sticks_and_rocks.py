@@ -101,7 +101,7 @@ poddulisti.append(Mellibesti)
 Thorinn = Ant("blue")
 Thorinn.velocity=0.5
 Thorinn.direction = "left"
-Thorinn.posX = 100
+Thorinn.posX = 90
 Thorinn.posY = 31
 Thorinn.name="Thorinn"
 Thorinn.picture = 'ant_blue_cute_left.gif'
@@ -120,6 +120,17 @@ Melli.draw(win)
 Melli.falling = False
 poddulisti.append(Melli)
 
+Gloin = Ant("red")
+Gloin.velocity=1
+Gloin.direction = "right"
+Gloin.posX = 70
+Gloin.posY = 15
+Gloin.name="Gloin"
+Gloin.picture = 'ant-red-right.gif'
+Gloin.draw(win)
+Gloin.falling = False
+poddulisti.append(Gloin)
+
 Dwalin = Ant("black")
 Dwalin.velocity=1
 Dwalin.direction = "right"
@@ -131,21 +142,23 @@ Dwalin.draw(win)
 Dwalin.falling = False
 poddulisti.append(Dwalin)
 
-Balin = Ant("red")
+Balin = Ant("black")
 Balin.velocity=1
 Balin.direction = "right"
 Balin.posX = 10
 Balin.posY = 31
 Balin.name="Balin"
-Balin.picture = 'ant-red-right.gif'
+Balin.picture = 'ant-black-right.gif'
 Balin.draw(win)
 Balin.falling = False
 poddulisti.append(Balin)
 
+
+
 Melli1 = Ant("red")
 Melli1.velocity=1
 Melli1.direction = "left"
-Melli1.posX = 60
+Melli1.posX = 15
 Melli1.posY = 7
 Melli1.name="Melli1"
 Melli1.picture = 'ant-red-left.gif'
@@ -206,8 +219,24 @@ MoveableRocklisti.append(MoveableRock1)
 
 MoveableRock2 = MoveableRock("grey")
 MoveableRock2.picture = 'StaticRock1.gif'
-MoveableRock2.posX = 75
-MoveableRock2.posY = 32
+MoveableRock2.posX = 35
+MoveableRock2.posY = 24
 MoveableRock2.falling = False
 MoveableRock2.draw(win)
 MoveableRocklisti.append(MoveableRock2)
+
+MoveableRock3 = MoveableRock("grey")
+MoveableRock3.picture = 'StaticRock1.gif'
+MoveableRock3.posX = 110
+MoveableRock3.posY = 16
+MoveableRock3.falling = False
+MoveableRock3.draw(win)
+MoveableRocklisti.append(MoveableRock3)
+
+MoveableRock4 = MoveableRock("grey")
+MoveableRock4.picture = 'StaticRock1.gif'
+MoveableRock4.posX = 77
+MoveableRock4.posY = 24
+MoveableRock4.falling = False
+MoveableRock4.draw(win)
+MoveableRocklisti.append(MoveableRock4)
