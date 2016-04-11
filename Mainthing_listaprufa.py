@@ -37,7 +37,13 @@ while t < 300:
         for j in range(0, len(poddulisti)):
             if (poddulisti[j].posY == (MoveableRocklisti[i].posY)-1):
                 if (((poddulisti[j].posX+5) > MoveableRocklisti[i].posX and poddulisti[j].posX < (MoveableRocklisti[i].posX+5)) or ((poddulisti[j].posX+5) < MoveableRocklisti[i].posX and poddulisti[j].posX > (MoveableRocklisti[i].posX+5))):
-                    MoveableRocklisti[i].collision(poddulisti[j],win)                         
+                    MoveableRocklisti[i].collision(poddulisti[j],win)  
+
+    for i in range(len(MoveableRocklisti)):
+        for j in range(0, len(ladybuglisti)):
+            if (ladybuglisti[j].posY == (MoveableRocklisti[i].posY)-1):
+                if (((ladybuglisti[j].posX+5) > MoveableRocklisti[i].posX and ladybuglisti[j].posX < (MoveableRocklisti[i].posX+5)) or ((ladybuglisti[j].posX+5) < MoveableRocklisti[i].posX and ladybuglisti[j].posX > (MoveableRocklisti[i].posX+5))):
+                    flyingbugslisti.append(ladybuglisti[i])
 
     for i in range(len(MoveableRocklisti)):
         for j in range(len(Sticklisti)):
