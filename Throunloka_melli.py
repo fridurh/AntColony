@@ -210,7 +210,7 @@ class Ant(Animal):
           if (self.direction == "left"):
              self.direction = "right"
              self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
+             self.picture = "ant_blue_cute_right.gif"
              self.draw(win)
           else:
              self.direction = "left"
@@ -219,7 +219,18 @@ class Ant(Animal):
              self.draw(win)
        elif (self.color == 'grey'):
           self.pic.undraw()
-          self.picture = 'StaticRock1.gif'       
+          self.picture = 'StaticRock1.gif' 
+       elif (self.color == 'green'):
+          if (self.direction == "left"):
+             self.direction = "right"
+             self.pic.undraw()
+             self.picture = "ant_green_cute_right.gif"
+             self.draw(win)
+          else:
+             self.direction = "left"
+             self.pic.undraw()
+             self.picture = "ant_green_cute_left.gif"
+             self.draw(win)        
        else:
           if (self.direction == "left"):
               self.direction = "right"

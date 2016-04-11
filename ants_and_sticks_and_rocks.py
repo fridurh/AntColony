@@ -87,13 +87,13 @@ Sticklisti.append(Stick66)
 
 poddulisti = [];
 
-Mellibesti = Ant("red")
-Mellibesti.velocity=1
+Mellibesti = Ant("green")
+Mellibesti.velocity=0.5
 Mellibesti.direction = "left"
-Mellibesti.posX = 90
-Mellibesti.posY = 7
+Mellibesti.posX = 110
+Mellibesti.posY = 47
 Mellibesti.name= "Mellibesti"
-Mellibesti.picture = 'ant-red-left.gif'
+Mellibesti.picture = 'ant_green_cute_left.gif'
 Mellibesti.draw(win)
 Mellibesti.falling = False
 poddulisti.append(Mellibesti)
@@ -158,7 +158,7 @@ ladybuglisti = [];
 Padda = Ladybug("pink")
 Padda.velocity=0.8
 Padda.direction = "right"
-Padda.posX = 60
+Padda.posX = 90
 Padda.posY = 15
 Padda.name="Padda"
 Padda.picture = 'ladybug_walk-right.gif'
@@ -180,7 +180,7 @@ ladybuglisti.append(Padda2)
 Padda3 = Ladybug("pink")
 Padda3.velocity=0.8
 Padda3.direction = "right"
-Padda3.posX = 20
+Padda3.posX = 35
 Padda3.posY = 23
 Padda3.name="Padda"
 Padda3.picture = 'ladybug_walk-right.gif'
