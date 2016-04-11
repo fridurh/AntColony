@@ -49,7 +49,7 @@ while t < 300:
     for i in range(len(ladybuglisti)):
         for j in range(len(Sticklisti)):
             ladybuglisti[i].LadyFalling(Sticklisti[j])
-            if (ladybuglisti[i].LFalling and ladybuglisti[i].posX > 12 and ladybuglisti[i].posX!= 118-8):
+            if (ladybuglisti[i].LFalling and ladybuglisti[i].posX > 12 and ladybuglisti[i].posX!= 100):
                 flyingbugslisti.append(ladybuglisti[i])
 
     for i in range(len(poddulisti)):

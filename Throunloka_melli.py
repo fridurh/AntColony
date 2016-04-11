@@ -329,8 +329,9 @@ class Ladybug(Animal):
       else:
          self.direction = "left"
          self.pic.undraw()
-         self.picture = "ladybug_walk"
+         self.picture = "ladybug_walk.gif"
+         self.draw(win)
 
    def hitwall(self,win):
-      if ((self.posX < -5) or (self.posX > 110)):
+      if ((self.posX < -5) or (self.posX > 105)):
          self.turnAround(win)

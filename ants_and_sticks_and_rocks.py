@@ -157,11 +157,11 @@ flyingbugslisti = [];
 ladybuglisti = [];
 Padda = Ladybug("pink")
 Padda.velocity=0.8
-Padda.direction = "left"
-Padda.posX = 20
+Padda.direction = "right"
+Padda.posX = 60
 Padda.posY = 15
 Padda.name="Padda"
-Padda.picture = 'ladybug_walk.gif'
+Padda.picture = 'ladybug_walk-right.gif'
 Padda.falling = False
 Padda.draw(win)
 ladybuglisti.append(Padda)
