@@ -5,9 +5,6 @@ from graphics import *
 import itertools 
 
 
-#hallohallo
-
-
 
 st = 0.1        
 t=0
@@ -51,14 +48,14 @@ while t < 300:
 
     for i in range(len(ladybuglisti)):
         for j in range(len(Sticklisti)):
-            ladybuglisti[i].isFalling(Sticklisti[j])
-            if (ladybuglisti[i].falling):
+            ladybuglisti[i].LadyFalling(Sticklisti[j])
+            if (ladybuglisti[i].LFalling):
                 flyingbugslisti.append(ladybuglisti[i])
 
     for i in range(len(poddulisti)):
         for j in range(len(ladybuglisti)):
             if (poddulisti[i].posY == ladybuglisti[j].posY):
-                if (((poddulisti[i].posX+3) > ladybuglisti[j].posX and poddulisti[i].posX < (ladybuglisti[j].posX+3)) or ((poddulisti[i].posX+3) < ladybuglisti[j].posX and poddulisti[i].posX > (ladybuglisti[j].posX+3))):
+                if (((poddulisti[i].posX+2) > ladybuglisti[j].posX and poddulisti[i].posX < (ladybuglisti[j].posX+2)) or ((poddulisti[i].posX+2) < ladybuglisti[j].posX and poddulisti[i].posX > (ladybuglisti[j].posX+2))):
                     flyingbugslisti.append(ladybuglisti[j])
 
     for i in range(len(flyingbugslisti)):
@@ -75,7 +72,7 @@ while t < 300:
 
   
     
-    #fridur
+    
     
     
 

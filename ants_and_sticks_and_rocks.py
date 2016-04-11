@@ -104,7 +104,7 @@ Thorinn.direction = "left"
 Thorinn.posX = 100
 Thorinn.posY = 31
 Thorinn.name="Thorinn"
-Thorinn.picture = 'ant_blue_cute_left.gif'
+Thorinn.picture = 'ant_blue_cute_left.png'
 Thorinn.draw(win)
 Thorinn.falling = False
 poddulisti.append(Thorinn)
@@ -190,14 +190,14 @@ ladybuglisti.append(Padda3)
 
 
 StatickRock1 = StaticRock("grey")
-StatickRock1.picture = 'StaticRock1.gif'
+StatickRock1.picture = 'StaticRock1.png'
 StatickRock1.posX = 3
 StatickRock1.posY = 32
 StatickRock1.draw(win)
 
 MoveableRocklisti = [];
 MoveableRock1 = MoveableRock("grey")
-MoveableRock1.picture = 'StaticRock1.gif'
+MoveableRock1.picture = 'StaticRock1.png'
 MoveableRock1.posX = 65
 MoveableRock1.posY = 40
 MoveableRock1.falling = False

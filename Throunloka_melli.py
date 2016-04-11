@@ -130,16 +130,16 @@ class MoveableRock(Rock):
           if (self.direction == "left"):
              self.direction = "right"
              self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
+             self.picture = "ant_blue_cute_left.png"
              self.draw(win)
           else:
              self.direction = "left"
              self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
+             self.picture = "ant_blue_cute_left.png"
              self.draw(win)
        elif (self.color == 'grey'):
           self.pic.undraw()
-          self.picture = 'StaticRock1_angry.gif'
+          self.picture = 'StaticRock1_angry.png'
           self.draw(win)       
        else:
           if (self.direction == "left"):
@@ -210,16 +210,16 @@ class Ant(Animal):
           if (self.direction == "left"):
              self.direction = "right"
              self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
+             self.picture = "ant_blue_cute_left.png"
              self.draw(win)
           else:
              self.direction = "left"
              self.pic.undraw()
-             self.picture = "ant_blue_cute_left.gif"
+             self.picture = "ant_blue_cute_left.png"
              self.draw(win)
        elif (self.color == 'grey'):
           self.pic.undraw()
-          self.picture = 'StaticRock1.gif'       
+          self.picture = 'StaticRock1.png'       
        else:
           if (self.direction == "left"):
               self.direction = "right"
@@ -254,20 +254,21 @@ class Ant(Animal):
 class Ladybug(Animal):
    def __init__(self,color):
       self.color=color
+      self.LFalling = False
 
    def draw(self,win):
       self.pic = Image(Point(self.posX+10, self.posY), self.picture)
       self.pic.draw(win)
 
    def pfly(self, win):
-      self.velocity = 1
+      self.velocity = 1.2
       if self.direction == "left":
          self.posX=self.posX-self.velocity
-         self.posY=self.posY+0.2
+         self.posY=self.posY+1.2
          self.pic.undraw()
          self.picture = "Ladybug_fly.gif"
          self.draw(win)
-         self.pic.move(0.2, 0.2)
+         self.pic.move(1.2, 1.2)
          
 
       else:
@@ -278,5 +279,43 @@ class Ladybug(Animal):
          self.draw(win)
          self.pic.move(1.2, 1.2)
 
+   def LadyFalling(self, stick):
+      if self.posY ==  47 and stick.posY == 45: # the ant is on level 1
+        if self.posX < 47 and stick.posX < 47: #The ant is on Stick1
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True
+        elif self.posX > 45 and stick.posX > 45: #The ant is on Stick1
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True
 
+      if self.posY ==  39 and stick.posY == 37: # the ant is on level 2  
+        if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+          self.LFalling = True 
 
+      if self.posY ==  31 and stick.posY == 29: # the ant is on level 3
+        if self.posX < 60 and stick.posX < 60: # the ant is on Stick3
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True
+        elif self.posX > 58 and stick.posX > 58: #The ant is on Stick33
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True
+              
+      if self.posY ==  23 and stick.posY == 21: # the ant is on level 4
+        if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True
+               
+      if self.posY ==  15 and stick.posY == 13: # the ant is on level 5 
+        if self.posX < 52 and stick.posX < 52: # the ant is on Stick5
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True
+        elif self.posX > 50 and stick.posX > 50: #The ant is on Stick55
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length)-10) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True 
+
+      if self.posY ==  7 and stick.posY == 5: # the ant is on level 6    
+        if self.posX < 72 and stick.posX < 72: # the ant is on Stick6
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True
+        elif self.posX > 70 and stick.posX > 70: #The ant is on Stick66
+          if (((self.posX < stick.posX-6) and (self.posX >= stick.posX-8)) or ((self.posX > (stick.posX+stick.length-10)) and (self.posX <= (stick.posX+stick.length-8)))):
+            self.LFalling = True 
